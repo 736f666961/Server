@@ -17,7 +17,6 @@ const server = http.createServer((req, res) => {
     if(req.url === '/home' || req.url === "/"){
         res.writeHead(200,{'Content-Type' : 'text/html'});
         fs.createReadStream(__dirname + '/home.html').pipe(res);
-        // fs.createReadStream(__dirname + "/home.html").pipe(res);
         // res.write("index.html");
         
     }
